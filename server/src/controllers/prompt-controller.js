@@ -1,5 +1,5 @@
-import InputPrompt from "../models/input-prompt";
-import openai from "../config/openai";
+const InputPrompt = require("../models/input-prompt");
+const openai = require("../config/openai");
 const promptController = {
   async sendText(req, res) {
     const openaiApi = openai.configuration()
@@ -16,10 +16,10 @@ const promptController = {
     } catch (error) {
       return res.status(400).json({
         success:false,
-        error:error.response ? error.response :"there was  an inssue on the server"
+        error:error.response ? error.response.data :"there was  an inssue on the server"
       })
     } 
   },
 };
 
-export default promptController;
+module.exports = promptController;

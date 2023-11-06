@@ -1,5 +1,4 @@
-import OpenAI from "openai";
-
+const OpenAI = require("openai");
 class openai {
   static configuration() {
     const configuration = new OpenAI({
@@ -20,4 +19,4 @@ class openai {
     return textCreation;
   }
 }
-export default openai;
+module.exports = openai;

@@ -4,4 +4,4 @@ class InputPrompt {
     }
 }
 
-export default InputPrompt
+module.exports = InputPrompt;
